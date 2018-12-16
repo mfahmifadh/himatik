@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Dashboard</title>
+    <title>HIMATIK - PNJ</title>
 
     <!-- Bootstrap core CSS-->
     <link href="{{ asset('admin/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -119,8 +119,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Forms   :</h6>
-            <a class="dropdown-item" href="{{ url('admin/createInfor')}}">Tambah Berita</a>
-            <a class="dropdown-item" href="login.html">Tambah Informasi</a>
+            <a class="dropdown-item" href="{{ url('admin/post')}}">Post</a>
+            <a class="dropdown-item" href="{{ url('admin/information')}}">Informasi</a>
             <a class="dropdown-item" href="register.html">Tambah Grand Desain</a>
             <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
             <div class="dropdown-divider"></div>

@@ -7,7 +7,7 @@
 		<div class="card mb-3">
 			<div class="card-header">
     	<i class="fas fa-chart-area"></i>
-	 		Create Information</div>
+	 		Buat Informasi Baru</div>
  	 	<div class="card-body">   
 	    <form method="POST" action="{{ url('admin/createInformation') }}">
 	    	{{ csrf_field() }}

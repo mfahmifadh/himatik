@@ -13,11 +13,20 @@
 
 Route::get('/', 'HomeController@index');
 Route::group(['prefix' => 'admin'], function(){
+	// information
+	Route::get('/information', 'AdminController@information' );
 	Route::get('/createInfor',function(){ return view('admin/createInfor');});
 	Route::post('createInformation', 'AdminController@createInformation');
 	Route::get('editInfor/{id}','AdminController@editInfor');
 	Route::post('updateInfor/{id}','AdminController@updateInfor');
 	Route::delete('destroyInfor/{id}', 'AdminController@destroyInfor');
+	// post
+	Route::get('/post', 'AdminController@post' );
+	Route::get('/createPost',function(){ return view('admin/createPost');});
+	Route::post('processPost', 'AdminController@createPost');
+	Route::get('editPost/{id}','AdminController@editPost');
+	Route::post('updatePost/{id}','AdminController@updatePost');
+	Route::delete('destroyPost/{id}', 'AdminController@destroyPost');
 });
 
 Auth::routes();

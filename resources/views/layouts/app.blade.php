@@ -66,7 +66,7 @@
                 <li><a href="#portfolio">Alumni</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
-          
+
         </nav>
     </div>
 
@@ -248,6 +248,30 @@
     </div>
   </div>
 
+  <!-- Modal Info Penting -->
+
+  <div class="modal fade" role="dialog" id="comment-modal">
+   <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><text> <text></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <text> </text>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+</div>
+
 
   <!-- Modal Sospol -->
   <div class="modal fade sospol" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -268,11 +292,12 @@
         </div>
       </div>
     </div>
-  </div> 
+  </div>
 
   <!--==========================
     Footer
   ============================-->
+
   <footer id="footer">
     <div class="container">
       <div class="copyright">
@@ -302,8 +327,6 @@
       <!-- Template Main Javascript File -->
       <script src="{{ asset('js/main.js') }}"></script>
       <!-- untuk load jumlah mahasiswa -->
-      <script src="{{ asset('js/counter.js') }}"></script> 
-      <!--<script src="{{ asset('lib/jquery/jquery.min.js') }}"></script> -->
-
+      <script src="{{ asset('js/counter.js') }}"></script>
     </body>
     </html>

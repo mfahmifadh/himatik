@@ -30,75 +30,68 @@
             <!--==========================
               Info Penting
             ============================-->
-            
+
 
         <!--==========================
           Our Portfolio Section
         ============================-->
         <section id="portfolio" class="wow fadeInUp">
-            <section id="services"> 
-                <div class="row">  
-                  <div class="col-md-3">
+            <section id="services">
+              <div class="row">
+                  <div class="col-md-3" style="margin-left: 20px">
                     <div class="box wow fadeInLeft">
-                      <center>
-                      <div class="section">
-                        <h2>INFO PENTING</h2><hr>
-                        </div>
-                      </center>
+                      <div class="section-header">
+                        <h2>Info Penting</h2>
+                       </div>
                   @foreach($information as $data)
-                    <p class="description">
-                      <center>
-                        <i class="ion-android-checkmark-circle"></i> 
-                        <a href="#myModal" style="color: #39DCE2;" data-toggle="modal"><b>
-                        {{ $data['heading_infor']}} | {{ $data['date']}}</b></a><hr>
-                      </center>
-                    </p>
-                  @endforeach 
-                 </div>
-                </div>
-                <div class="container">
-                <div class="col-md-12">
-                    <div class="box wow fadeInLeft">
-                      <center>
-                      <div class="section">
-                        <h2>BERITA</h2><hr>
-                        </div>
-                      </center>
-                    <p class="description">
-                      <div class="row">
-                        @foreach($information as $data)
-                           <div class="col-md-4"><br>
-                            <div class="card" style="width: 18rem;">
-                             <div class="portfolio-item wow fadeInUp">   
-                              <a href="{{ asset('img/berita1.png') }}" class="portfolio-popup">
-                                <img src="{{ asset('img/berita1.png') }}" alt="">
-                                <div class="portfolio-overlay">
-                                  <div class="portfolio-info"><h2 class="wow fadeInUp">{{ $data['heading_infor']}}</h2></div>
-                                </div>
-                              </a>
-                             </div>
-                            </div>
-                           <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                  <p class="description">
+                      <div class="post" data-postid="{{ $data->id }}">
+                         <div class="article">
+                            <a href="#" class="create-comment" style="color: #39DCE2;" data-toggle="modal"><b>
+                            <center>{{ $data->heading_infor}}</center></a><hr></b>
+                         </div>
+                         <div hidden>
+                          <div class="detail">
+                            <a href="#">{{ $data->detail_infor }}</a>
                           </div>
-                    @endforeach
-                        <hr>
-                    </p>
-                 </div>
+                         </div>
+                      </div>
+                  </p>
+                  @endforeach
+                        </p>
+                    </div>
+                  </div>
+                <div class="container">
+                  <div class="row">
+                  <div class="col-lg-12">
+                      <div class="box wow fadeInLeft">
+                         <div class="section-header">
+                          <h2>POSTS</h2>
+                         </div>
+                      <p class="description">
+                        <div class="row">
+                          @foreach($post as $row)
+                             <div class="col-md-4"><br>
+                              <div class="card" style="width: 18rem;">
+                               <div class="portfolio-item wow fadeInUp">
+                                <a href="{{ asset('images/posts/' . $row->filename) }}" class="portfolio-popup">
+                                  <img src="{{ asset('images/posts/' . $row->filename) }}" width="200" height="150">
+                                </a>
+                               </div>
+                              </div>
+                             <div class="card-body">
+                                <center><a href="{{ $row->konten}}" class="btn btn-primary"><b>DETAIL POST</b></a></center>
+                              </div>
+                            </div>
+                          @endforeach
+                      </p>
+                      </div>
+                  </div>
                 </div>
-                </div>
-            </section>
+              </div>
             </div>
           </div>
-        </section><!-- #portfolio -->
-        </div>
-      </div>
-    </section><!-- #about -->
+        </section>
+      </section><!-- #portfolio -->
+
 @endsection
-
-
-
-
